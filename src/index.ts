@@ -11,6 +11,7 @@ import statsRouter from './routes/stats';
 import dmRouter from './routes/dm';
 import notificationsRouter from './routes/notifications';
 import searchRouter from './routes/search';
+import timelineRouter from './routes/timeline';
 
 dotenv.config();
 
@@ -36,6 +37,7 @@ app.use('/api/stats', statsRouter);
 app.use('/api/dm', dmRouter);
 app.use('/api/notifications', notificationsRouter);
 app.use('/api/search', searchRouter);
+app.use('/api/timeline', timelineRouter);
 
 // Health check
 app.get('/health', (req, res) => {
